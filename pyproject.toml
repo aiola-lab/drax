@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drax-asr"
+version = "0.1.0"
+description = "DRAX: Speech Recognition with Discrete Flow Matching"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-NC-4.0" }
+authors = [
+  { name = "aiOla.ai" }
+]
+keywords = ["asr", "speech", "pytorch", "transformers", "whisper", "flow-matching"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: Other/Proprietary License",
+  "Operating System :: OS Independent",
+]
+
+dependencies = [
+  # Pinned transformers version
+  "transformers==4.52.3",
+  # External libraries used by the code
+  "omegaconf>=2.3.0",
+  "einops>=0.7.0",
+  "safetensors>=0.4.2",
+  "huggingface_hub>=0.24.0",
+  "torchaudio>=2.7.0; extra == 'with-torch'",
+]
+
+[project.optional-dependencies]
+# Torch is typically installed from a CUDA-specific index; leave it to the user.
+with-torch = [
+  "torch==2.7.0; platform_system != 'Darwin'",
+  "torchaudio==2.7.0; platform_system != 'Darwin'",
+]
+
+[project.urls]
+Homepage = "https://github.com/aiola-labs/drax"
+
+[tool.setuptools]
+packages = ["drax", "drax.flow", "drax.model"]
+
+[tool.setuptools.package-data]
+drax = ["py.typed"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 180
+
+[tool.ruff.lint]
+select = [
+  "E",  # pycodestyle errors
+  "F",  # pyflakes
+  "I",  # isort
+  "B",  # flake8-bugbear
+  "UP", # pyupgrade
+  "D",  # pydocstyle (docstring rules)
+]
+ignore = [
+  # Docstrings: relax for now
+  "D100", "D101", "D102", "D103", "D104", "D105", "D107",
+  "D203", "D213", "D205", "D400", "D415",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
