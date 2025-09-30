@@ -35,7 +35,7 @@ pip install -e .[with-torch]
 ```python
 from drax import Transcriber
 
-asr = Transcriber(model_path="aiola-labs/drax-small")  # HF repo or local path
+asr = Transcriber(model_path="aiola-labs/drax-v1")  # HF repo or local path
 result = asr.transcribe("/path/to/audio.wav", language="en")
 print(result[0].transcript)
 ```
