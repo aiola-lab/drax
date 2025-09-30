@@ -10,6 +10,10 @@
 # Part of this implementation is adapted from https://github.com/louaaron/Score-Entropy-Discrete-Diffusion
 # which is released under MIT license
 
+# Modifications copyright (c) 2025 aiOla
+# adapted from https://github.com/facebookresearch/flow_matching/blob/main/examples/text/model/transformer.py
+# changes: added support for audio branch via cross attention and CFG
+
 import math
 
 import torch

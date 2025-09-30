@@ -1,4 +1,4 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Copyright (c) aiOla.ai
 # All rights reserved.
 #
 # This source code is licensed under the CC-by-NC license found in the
