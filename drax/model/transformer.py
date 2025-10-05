@@ -336,7 +336,7 @@ class Transformer(nn.Module):
             )
 
         else:
-            # CFG inference mode - not training and cfg_strength > 0
+            # CFG inference mode - not training and cfg_strength != 1.0
             # Create unconditioned batch (zeros for audio embeddings)
             # NOTE: we use a similar approach to LlamaGen:
             # https://github.com/FoundationVision/LlamaGen/blob/main/autoregressive/models/generate.py#L96-L97

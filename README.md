@@ -6,8 +6,8 @@ This repository contains the official implementation for **Drax: Speech Recognit
 
 
 <div align="center">
-  <img src="misc/FlowASR-arch.png" alt="DRAX architecture" width="46%" />
-  <img src="misc/FlowASR-sampling.png" alt="Discrete flow sampling" width="51%" />
+  <img src="misc/FlowASR-arch.png" alt="DRAX architecture" width="46.5%" />
+  <img src="misc/FlowASR-sampling.png" alt="Discrete flow sampling" width="50%" />
 </div>
 
 
@@ -65,7 +65,6 @@ print(result.transcript)
 
 Core deps are installed via `pyproject.toml` (including `transformers==4.52.3`).
 Torch/torchaudio are installed via the `[with-torch]` extra or separately for your CUDA.
-If you plan to train, also install: `hydra-core`, `datasets`, `wandb`, `jiwer`, `whisper-normalizer`, `soundfile`, `flow_matching`.
 
 ## Development
 
