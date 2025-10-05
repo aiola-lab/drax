@@ -6,8 +6,8 @@ This repository contains the official implementation for **Drax: Speech Recognit
 
 
 <div align="center">
-  <img src="misc/FlowASR-arch.png" alt="DRAX architecture" width="46%" />
-  <img src="misc/FlowASR-sampling.png" alt="Discrete flow sampling" width="51%" />
+  <img src="misc/FlowASR-arch.png" alt="DRAX architecture" width="46.5%" />
+  <img src="misc/FlowASR-sampling.png" alt="Discrete flow sampling" width="50%" />
 </div>
 
 
@@ -42,18 +42,12 @@ print(result[0].transcript)
 
 Controlling sampling steps, temperature, etc.
 ```python
-from drax import Transcriber
-
-asr = Transcriber(model_path="aiola-labs/drax-v1")
 result = asr.transcribe("/path/to/audio.wav", language="en", sampling_steps=32, temperature=1e-2)
 print(result[0].transcript)
 ```
 
 Batch inference
 ```python
-from drax import Transcriber
-
-asr = Transcriber(model_path="aiola-labs/drax-v1")
 audio_paths = ["/path/to/audio1.wav", "/path/to/audio2.wav"]
 languages = ["en", "de"]
 result = asr.transcribe(audio_paths, language=languages)
@@ -65,7 +59,6 @@ print(result.transcript)
 
 Core deps are installed via `pyproject.toml` (including `transformers==4.52.3`).
 Torch/torchaudio are installed via the `[with-torch]` extra or separately for your CUDA.
-If you plan to train, also install: `hydra-core`, `datasets`, `wandb`, `jiwer`, `whisper-normalizer`, `soundfile`, `flow_matching`.
 
 ## Development
 
