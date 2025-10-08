@@ -2,6 +2,8 @@
 
 ## Introduction
 
+📄 [Paper](https://arxiv.org/abs/2510.04162) | 🤗 [Models](https://huggingface.co/collections/aiola/drax-68e62bb7b2fb202d2359637d) 
+
 This repository contains the official implementation for **Drax: Speech Recognition with Discrete Flow Matching**.
 
 
@@ -73,7 +75,7 @@ pre-commit run -a
 
 ## References
 
-- Drax: Speech Recognition with Discrete Flow Matching: TBD
+- Drax: Speech Recognition with Discrete Flow Matching: https://arxiv.org/abs/2510.04162
 - Discrete Flow Matching: https://arxiv.org/abs/2407.15595
 - Flow Matching with General Discrete Paths: https://arxiv.org/abs/2412.03487
 - Generative Flows on Discrete State-Spaces: https://arxiv.org/abs/2402.04997
@@ -94,4 +96,11 @@ The majority of the code is licensed under CC-BY-NC; portions may be available u
 
 ## Citation
 
-TDB
+```bibtex
+@article{navon2025drax,
+  title={Drax: Speech Recognition with Discrete Flow Matching},
+  author={Navon, Aviv and Shamsian, Aviv and Glazer, Neta and Segal-Feldman, Yael and Hetz, Gill and Keshet, Joseph and Fetaya, Ethan},
+  journal={arXiv preprint arXiv:2510.04162},
+  year={2025}
+}
+```
