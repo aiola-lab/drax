@@ -34,6 +34,14 @@ pip install -e .[with-torch]
 
 ## Quickstart: Transcribe
 
+Using the generate cli:
+
+```bash
+python generate.py --model_path aiola/drax-v1 --audio_path path/to/audio --language <langauge-code>
+```
+
+Or using the `Transcriber`:
+
 ```python
 from drax import Transcriber
 
