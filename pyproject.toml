@@ -27,6 +27,7 @@ dependencies = [
   "einops>=0.7.0",
   "safetensors>=0.4.2",
   "huggingface_hub>=0.24.0",
+  "flow-matching>=1.0.6",
   "torchaudio>=2.7.0; extra == 'with-torch'",
 ]
 
